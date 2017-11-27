@@ -28,8 +28,6 @@ let approved=0
 let suspense=0
 let expulsions=0
 
-echo "User Cups Donations Crowns Rating Comment" > $out_file
-
 while read lines
 do
 
@@ -77,11 +75,15 @@ do
 	fi
 	
 	echo $user $ucup $udon $ucro $rating $comment 
-done < $temp_file >> $out_file
+done < $temp_file > $out_file
+
+
 
 cat $out_file | sort -k5 -r > $temp_file
 
-cat $temp_file > $out_file
+echo "User Cups Donations Crowns Rating Comment" > $out_file
+
+cat $temp_file >> $out_file
 
 echo -e >> $out_file
 echo -e >> $out_file
