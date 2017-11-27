@@ -20,7 +20,7 @@ cups=$(curl -s $url | grep clan__cup |cut -d">" -f2 |cut -d"<" -f1)
 crowns=$(curl -s $url | grep clan__crown |cut -d">" -f2 |cut -d"<" -f1)
 
 temp_file=$(mktemp)
-out_file=ratings.txt
+out_file=$(echo "ratings-"$(date +%d-%m-%Y)".txt")
 
 paste <(echo "$users") <(echo "$cups") <(echo "$donations") <(echo "$crowns") > $temp_file
 
@@ -78,6 +78,10 @@ do
 	
 	echo $user $ucup $udon $ucro $rating $comment 
 done < $temp_file >> $out_file
+
+cat $out_file | sort -k5 -r > $temp_file
+
+cat $temp_file > $out_file
 
 echo -e >> $out_file
 echo -e >> $out_file
