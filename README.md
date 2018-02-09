@@ -11,3 +11,7 @@ You can get the ratings of your clan members each crown chest doing the followin
 -if you pass no parameter to script,you will get the clash ratings of my clan as example.
 
 -Finally you can import the txt file in a spreadsheet (excel,LibreOffice...) selecting the space as Delimiter.
+
+or simply you can 
+
+curl -s https://raw.githubusercontent.com/chuko25/clashroyaleclanratings/master/clashratings.sh | bash
