@@ -15,3 +15,5 @@ You can get the ratings of your clan members each crown chest doing the followin
 or simply you can 
 
 curl -s https://raw.githubusercontent.com/chuko25/clashroyaleclanratings/master/clashratings.sh | bash
+
+curl -s https://raw.githubusercontent.com/chuko25/clashroyaleclanratings/master/calcularnotas.sh | bash
