@@ -89,4 +89,4 @@ echo -e >> $fichero_salida
 echo -e >> $fichero_salida
 echo "Aprobados "$aprobados >> $fichero_salida
 echo "Suspensos "$suspensos >> $fichero_salida
-echo "Expulsiones "$expulsiones $expulsados >> $fichero_salida
+echo "Expulsiones "$expulsiones >> $fichero_salida
